@@ -5,4 +5,7 @@ spring:
   mvc:
     view:
       prefix: ftl
+  freemarker:
+    charset: UTF-8
+    cache: false
 #      suffix:  默认为templates下
