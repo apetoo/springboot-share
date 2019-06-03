@@ -1,0 +1,15 @@
+#自动装配
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.warape.springbootshare.base.config.HelloWorldAutoConfiguration
+
+
+#初始化加载  加载应用上下文初始器
+org.springframework.context.ApplicationContextInitializer=\
+com.warape.springbootshare.base.context.AfterHelloWorldApplicationContextInitializer,\
+com.warape.springbootshare.base.context.BeforeHelloWorldApplicationContextInitializer
+
+
+
+#spring监听  加载应用事件监听器
+org.springframework.context.ApplicationListener=\
+com.warape.springbootshare.base.listener.HelloWorldApplicationListener

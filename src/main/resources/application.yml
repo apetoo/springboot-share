@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: local
+
+  mvc:
+    view:
+      prefix: ftl
+#      suffix:  默认为templates下
