@@ -15,10 +15,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.warape.springbootshare.base.demo.scan")
 //@EnableCaching
 //@EnableHelloWorld
-public class bootstrapOne {
+public class BootstrapOne {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = new SpringApplicationBuilder(bootstrapOne.class)
+        ConfigurableApplicationContext context = new SpringApplicationBuilder(BootstrapOne.class)
                 .web(WebApplicationType.NONE)
                 .sources()
                 .run(args);

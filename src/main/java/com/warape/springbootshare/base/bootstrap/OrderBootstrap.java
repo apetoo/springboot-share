@@ -1,8 +1,8 @@
 package com.warape.springbootshare.base.bootstrap;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.WebApplicationType;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,8 +13,8 @@ import java.util.Set;
  * @author: 万明宇 (warApe)
  * @create: 2019-05-30 18:30
  **/
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-//@EnableHelloWorld
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@ComponentScan(basePackages = "com.warape.springbootshare.base.other")
 public class OrderBootstrap {
 
     public static void main(String[] args) {
@@ -23,6 +23,7 @@ public class OrderBootstrap {
         //指定入口类
         Set<String> sources = new HashSet<>();
         sources.add(OrderBootstrap.class.getName());
+        application.setWebApplicationType(WebApplicationType.NONE);
         application.setSources(sources);
         application.run(args);
     }

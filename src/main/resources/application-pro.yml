@@ -1,2 +1,2 @@
 logging:
-  config: logback-spring-pro.xml
+  config: classpath:logback-spring-pro.xml
