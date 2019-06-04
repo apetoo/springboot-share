@@ -23,6 +23,9 @@ public class SpringbootShareApplicationTests {
     }
 
 
+    /**
+     * 测试redis
+     */
     @Test
     public void test01(){
         stringTemplateRedisUtil.set("war_ape","测试");
@@ -30,6 +33,9 @@ public class SpringbootShareApplicationTests {
         System.out.println("war_ape = " + warApe);
     }
 
+    /**
+     * 测试线程池
+     */
     @Test
     public void test02(){
         for (int i = 0; i < 1000; i++) {
