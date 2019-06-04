@@ -23,4 +23,14 @@ public class OnSystemPropertyCondition implements Condition {
         String property = environment.getProperty("properties");
         return property.equals(value);
     }
+
+//    @Override
+//    public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+//        try {
+//            context.getClassLoader().loadClass("org.springframework.jdbc.core.JdbcTemplate");
+//            return true;
+//        } catch (ClassNotFoundException e) {
+//            return false;
+//        }
+//    }
 }

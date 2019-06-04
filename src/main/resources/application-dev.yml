@@ -1,4 +1,4 @@
 logging:
-  file: logback-spring-dev.xml
+  config: logback-spring-dev.xml
 
 

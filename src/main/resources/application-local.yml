@@ -38,4 +38,4 @@ com:
 
 ## 日志路径
 logging:
-  file: logback-spring-local.xml
+  config: logback-spring-local.xml

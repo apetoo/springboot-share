@@ -9,6 +9,7 @@ import com.warape.springbootshare.integrated.utils.StringTemplateRedisUtil;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
@@ -27,6 +28,7 @@ import java.time.Duration;
  * @see SpringbootShareApplication @EnableRedisConfigType
  */
 //@Configuration  //查看入口类模式注解  @EnableRedisConfigType
+@Profile({"dev","pro"})
 public class JedisClusterConfig {
 
     private JedisClusterPoolProperties jedisClusterPoolProperties;

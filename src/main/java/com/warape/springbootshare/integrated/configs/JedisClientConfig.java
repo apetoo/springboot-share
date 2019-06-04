@@ -8,7 +8,10 @@ import com.warape.springbootshare.integrated.utils.RedisUtil;
 import com.warape.springbootshare.integrated.utils.StringTemplateRedisUtil;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
@@ -24,10 +27,11 @@ import java.time.Duration;
  *
  * @author warApe
  * @date 2018/5/11 15:50
- * @see SpringbootShareApplication   @EnableRedisConfigType
+ * @see SpringbootShareApplication
  */
-//@Configuration //查看入口类模式注解@EnableRedisConfigType
-public class JedisClientConfig {
+@Profile("local")
+@Configuration
+public class JedisClientConfig extends RedisAutoConfiguration {
 
     private JedisClientPoolProperties jedisClientPoolProperties;
     private JedisClientProperties jedisClientProperties;

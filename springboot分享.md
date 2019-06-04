@@ -251,6 +251,25 @@ public class SystemPropertyConditionBootstrap {
 
 场景: 比如springboot中他在装配的时候回首先判断是否有这个类(是否引入了此jar包下的哪个类等条件...),如果没有则不装配
 
+---
+- 自动配置中使用的条件化注解
+
+| 条件化注解 | 配置生效条件 | 
+| :---         |     :---:      | 
+| @ConditionalOnBean  | 配置了某个特定Bean| 
+| @ConditionalOnMissingBean  | 没有配置特定的Bean| 
+| @ConditionalOnClass  | Classpath里有指定的类| 
+| @ConditionalOnMissingClass  | Classpath里缺少指定的类| 
+| @ConditionalOnExpression  | 给定的Spring Expression Language（SpEL）表达式计算结果为true| 
+| @ConditionalOnJava  | Java的版本匹配特定值或者一个范围值| 
+| @ConditionalOnJndi  | 参数中给定的JNDI位置必须存在一个，如果没有给参数，则要有JNDIInitialContext| 
+| @ConditionalOnProperty  | 指定的配置属性要有一个明确的值| 
+| @ConditionalOnResource  | Classpath里有指定的资源| 
+| @ConditionalOnWebApplication  | 这是一个Web应用程序| 
+| @ConditionalOnNotWebApplication  | 这不是一个Web应用程序| 
+
+--------------------- 
+
 ## 自动装配
 
 - spring中有很多诸如此类spring.factories的自动装配
