@@ -1,7 +1,6 @@
 package com.warape.springbootshare.integrated.configs;
 
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
-import com.warape.springbootshare.SpringbootShareApplication;
 import com.warape.springbootshare.integrated.properties.JedisClusterConfigProperties;
 import com.warape.springbootshare.integrated.properties.JedisClusterPoolProperties;
 import com.warape.springbootshare.integrated.utils.RedisUtil;
@@ -9,7 +8,7 @@ import com.warape.springbootshare.integrated.utils.StringTemplateRedisUtil;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
@@ -23,12 +22,11 @@ import java.time.Duration;
 /**
  * 集群版
  *
- * @author 万明宇(战猿点)
+ * @author warApe
  * @date 2018/7/29 18:03
- * @see SpringbootShareApplication @EnableRedisConfigType
  */
-//@Configuration  //查看入口类模式注解  @EnableRedisConfigType
-@Profile({"dev","pro"})
+@Configuration
+//@Profile({"dev","pro"})
 public class JedisClusterConfig {
 
     private JedisClusterPoolProperties jedisClusterPoolProperties;

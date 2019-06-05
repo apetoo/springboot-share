@@ -1,26 +1,26 @@
 #集群版配置
 #com:
 #  warape:
-    #redis:
-    #  pool:
-    #    maxTotal: 100
-    #    maxIdle: 10
-    #    maxWaitMillis: 3000
-    #  cluster:
-    #    connectionTimeout: 3000
-    #    soTimeout: 3000
-    #    maxRedirections: 5
-    #    jedisClusterNodes: 10.143.131.63:6391,10.143.131.63:6392,10.143.131.63:6393,10.143.131.63:6394,10.143.131.63:6395,10.143.131.63:6396
-      #如果为多个集群 一次类推
-      #cluster1:
-      #  connectionTimeout:
-      #  soTimeout:
-      #  maxRedirections:
-      #  jedisClusterNodes:
-      #pool1:
-      #  maxTotal: 100
-      #  maxIdle: 10
-      #  maxWaitMillis: 3000
+#    redis:
+#      pool:
+#        maxTotal: 100
+#        maxIdle: 10
+#        maxWaitMillis: 3000
+#      cluster:
+#        connectTimeout: 2000
+#        readTimeout: 1000
+#        maxRedirections: 5
+#        jedisClusterNodes: 10.143.131.63:6391,10.143.131.63:6392,10.143.131.63:6393,10.143.131.63:6394,10.143.131.63:6395,10.143.131.63:6396
+#      #如果为多个集群 一次类推
+#      cluster1:
+#        connectTimeout:
+#        readTimeout:
+#        maxRedirections:
+#        jedisClusterNodes:
+#      pool1:
+#        maxTotal: 100
+#        maxIdle: 10
+#        maxWaitMillis: 3000
   #单机版配置
 com:
   warape:
@@ -29,6 +29,8 @@ com:
        client:
          host-name: 10.20.29.71
          port: 6379
+         connectTimeout: 2000
+         readTimeout: 1000
        pool:
          max-total: 100
          max-idle: 10
