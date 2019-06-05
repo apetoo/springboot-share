@@ -10,7 +10,7 @@ com:
         connectTimeout: 2000
         readTimeout: 1000
         maxRedirections: 5
-        jedisClusterNodes: 10.143.131.63:6391,10.143.131.63:6392,10.143.131.63:6393,10.143.131.63:6394,10.143.131.63:6395,10.143.131.63:6396
+        jedisClusterNodes: 192.168.131.1:6379,192.168.131.2:6379,192.168.131.3:6379
       #如果为多个集群 一次类推
 #      cluster1:
 #        connectTimeout:
